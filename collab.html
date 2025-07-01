@@ -1,34 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collaboration | D Mhiz</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="logo.JPG">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggle = document.querySelector(".menu-toggle");
-      const menu = document.querySelector("nav ul");
-
-      toggle.addEventListener("click", () => {
-        menu.classList.toggle("show");
-      });
-    });
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NGO Collaboration | D Mhiz</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="logo.JPG"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <script src="main.js"></script>
 </head>
 <body>
-
   <!-- Navigation -->
   <header>
     <nav>
       <div class="logo">D Mhiz</div>
-      <div class="menu-toggle">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+<div class="menu-toggle">
+  <i class="fas fa-bars open-icon"></i>
+  <i class="fas fa-times close-icon" style="display: none;"></i>
+</div>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#about">About</a></li>
@@ -38,14 +27,60 @@
       </ul>
     </nav>
   </header>
-      <!-- Footer -->
+
+  <!-- NGO Collaboration Section -->
+  <section class="container collaboration">
+    <h1>Partner with Us: NGO Collaboration</h1>
+    <p>
+      At <strong>D Mhiz</strong>, we believe that true impact happens through synergy. Our platform opens the door for NGOs, foundations, community initiatives, and social change organizations to partner with us and amplify grassroots empowerment using practical technology.
+    </p>
+    
+    <h2>Why Collaborate With Us?</h2>
+    <ul>
+      <li><strong>Community Reach:</strong> Through initiatives like <strong>TechRise Kano</strong>, we’ve reached hundreds of students in underserved areas with digital skills training and transformation tools.</li>
+      <li><strong>Innovation-Driven:</strong> Our flagship platforms like <strong>MemoryWeb</strong> are redefining how communities preserve culture, history, and personal identity using AI.</li>
+      <li><strong>Youth Engagement:</strong> We design youth-friendly programs in schools, Almajiri centers, and rural hubs to ensure no one is left behind in the tech revolution.</li>
+      <li><strong>Shared Values:</strong> We collaborate with organizations that promote dignity, education, sustainable development, women and youth empowerment, or digital inclusion.</li>
+    </ul>
+
+    <h2>Ways to Collaborate</h2>
+    <div class="highlight-boxes">
+      <div class="highlight">
+        <h3>📦 Co-Branded Programs</h3>
+        <p>Launch outreach projects or training series under a joint initiative. Perfect for NGOs aiming to expand tech impact in Northern Nigeria.</p>
+      </div>
+      <div class="highlight">
+        <h3>📚 Resource Development</h3>
+        <p>Partner to develop toolkits, digital learning guides, or culturally-aware tech training for communities.</p>
+      </div>
+      <div class="highlight">
+        <h3>🎤 Event Collaboration</h3>
+        <p>Co-host tech empowerment events, exhibitions, or advocacy campaigns focused on access, equity, and transformation.</p>
+      </div>
+      <div class="highlight">
+        <h3>🧠 Community Research</h3>
+        <p>We collect field insights that can support your program design or scale-up strategy, especially for NGOs that prioritize data-backed development.</p>
+      </div>
+    </div>
+
+    <h2>Let’s Build Something Powerful Together</h2>
+    <p>
+      Whether you're working on education, empowerment, inclusion, or innovation — we want to hear from you. Let's co-create solutions that truly serve people, preserve heritage, and build digital equity in Africa.
+    </p>
+
+    <div style="margin-top: 30px;">
+      <a href="mailto:muhsinibraheemsani@gmail.com" class="btn" style="padding: 10px 25px; background: #00bfff; color: white; border-radius: 5px; text-decoration: none;">Email to Propose a Partnership</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-      <div class="social-links">
-        <a href="https://www.instagram.com/d_mheiz?igsh=c3A3am5hcmZqM3Nr&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-        <a href="https://wa.me/2349120048986" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-        <a href="https://youtu.be/GNNwT45MCKQ?si=3dqM7B54Vr4lPaof" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
-        <a href="https://mailto:muhsinibraheemsani@gmail.com" target="_blank"><i class="fab fa-inbox"></i> Mail</a>
-      </div><br><br>
+    <div class="social-links">
+      <a href="https://www.instagram.com/d_mheiz?igsh=c3A3am5hcmZqM3Nr&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/2349120048986" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://youtu.be/GNNwT45MCKQ?si=3dqM7B54Vr4lPaof" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="mailto:muhsinibraheemsani@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    </div><br><br>
     <p>&copy; 2025 Muhsin Ibrahim | D Mhiz. All Rights Reserved.</p>
   </footer>
 </body>
