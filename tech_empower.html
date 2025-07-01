@@ -1,34 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Empowerment | D Mhiz</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Empowerment | D Mhiz</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="logo.JPG">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggle = document.querySelector(".menu-toggle");
-      const menu = document.querySelector("nav ul");
-
-      toggle.addEventListener("click", () => {
-        menu.classList.toggle("show");
-      });
-    });
-  </script>
-</head>
+  <script src="main.js"></script>
 <body>
-
   <!-- Navigation -->
   <header>
     <nav>
       <div class="logo">D Mhiz</div>
-      <div class="menu-toggle">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+<div class="menu-toggle">
+  <i class="fas fa-bars open-icon"></i>
+  <i class="fas fa-times close-icon" style="display: none;"></i>
+</div>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#about">About</a></li>
@@ -38,14 +26,46 @@
       </ul>
     </nav>
   </header>
-      <!-- Footer -->
+
+  <!-- Tech Empowerment Content -->
+  <section class="section-container">
+    <h1>Tech Empowerment Training</h1>
+    <p>
+      We believe in creating opportunities for underserved communities by equipping them with real digital skills. Our Tech Empowerment programs are driven by passion, vision, and the goal to make tech accessible to all.
+    </p>
+    <div class="highlight-box">
+      <strong>What We Do:</strong>
+      <ul>
+        <li>💻 Web & Mobile Development Training</li>
+        <li>🎨 Graphic Design & Creative Tools Workshops</li>
+        <li>🖥️ Digital Literacy & Basic Computer Education</li>
+        <li>🤝 Partnerships with NGOs, Schools, and Local Leaders</li>
+      </ul>
+    </div>
+    <p>
+      Our trainings are interactive, community-centered, and focused on immediate impact. We create a safe and inspiring learning space for young people—especially in rural or low-income areas.
+    </p>
+    <div class="highlight-box">
+      <strong>Why Partner with Us?</strong>
+      <ul>
+        <li>✅ Proven success across Kano State through TechRise Kano</li>
+        <li>✅ A passionate team with expertise in software, design, and training</li>
+        <li>✅ Flexible and customizable sessions based on local needs</li>
+      </ul>
+    </div>
+    <div class="cta">
+      <a href="index.html#contact">Partner or Sponsor a Session</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-      <div class="social-links">
-        <a href="https://www.instagram.com/d_mheiz?igsh=c3A3am5hcmZqM3Nr&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-        <a href="https://wa.me/2349120048986" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-        <a href="https://youtu.be/GNNwT45MCKQ?si=3dqM7B54Vr4lPaof" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
-        <a href="https://mailto:muhsinibraheemsani@gmail.com" target="_blank"><i class="fab fa-inbox"></i> Mail</a>
-      </div><br><br>
+    <div class="social-links">
+      <a href="https://www.instagram.com/d_mheiz?igsh=c3A3am5hcmZqM3Nr&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/2349120048986" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://youtu.be/GNNwT45MCKQ?si=3dqM7B54Vr4lPaof" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="mailto:muhsinibraheemsani@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    </div><br><br>
     <p>&copy; 2025 Muhsin Ibrahim | D Mhiz. All Rights Reserved.</p>
   </footer>
 </body>
