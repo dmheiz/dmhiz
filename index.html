@@ -136,5 +136,63 @@
 <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js"></script>
 
     <script src="main.js"></script>
+    <script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyAaKNnwVDeUyD1NZQoZD_WUQdHHgoMyDZY",
+    authDomain: "dmhiz01.firebaseapp.com",
+    projectId: "dmhiz01",
+    storageBucket: "dmhiz01.appspot.com", // fixed typo from "storage.app"
+    messagingSenderId: "174002046703",
+    appId: "1:174002046703:web:6e6cf35f595fbc9f777d1a",
+    measurementId: "G-G93N71K7ZR"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+<script>
+  const form = document.getElementById('contactForm');
+  const chatArea = document.getElementById('chatArea');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const name = form.name.value;
+    const email = form.email.value;
+    const message = form.message.value;
+
+    // Save to Firestore
+    await db.collection('contacts').add({
+      name,
+      email,
+      message,
+      timestamp: new Date()
+    });
+
+    form.reset();
+
+    // Show chat reply area
+    chatArea.style.display = 'block';
+    chatArea.innerHTML = `
+      <h3>Conversation with ${name}</h3>
+      <div id="chatMessages" style="background:#f0f0f0; padding:15px; border-radius:10px; margin-bottom:10px;">
+        <p><strong>${name}:</strong> ${message}</p>
+      </div>
+      <form id="replyForm">
+        <textarea id="replyText" placeholder="Reply..." required rows="3" style="width:100%;"></textarea>
+        <button type="submit">Send Reply</button>
+      </form>
+    `;
+
+    document.getElementById('replyForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const reply = document.getElementById('replyText').value;
+      const chatMessages = document.getElementById('chatMessages');
+      chatMessages.innerHTML += `<p><strong>You:</strong> ${reply}</p>`;
+      document.getElementById('replyText').value = '';
+    });
+  });
+</script>
+
 </body>
 </html>
