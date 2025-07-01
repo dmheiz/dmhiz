@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Muhsin Ibrahim | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.JPG">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.querySelector(".menu-toggle");
+      const menu = document.querySelector("nav ul");
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("show");
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <div class="logo">D Mhiz</div>
+      <div class="menu-toggle">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="profile.jpg" alt="Muhsin Ibrahim" class="profile-pic">
+      <h1>Hi, I'm Muhsin Ibrahim</h1>
+      <p>A Software Engineer, Visionary Leader & Tech-for-Good Advocate</p>
+      <a href="#projects" class="btn">Explore My Work</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I'm <strong>Muhsin Ibrahim</strong>, known online as <strong>D Mhiz</strong>, a software engineering student, visionary founder, and creative leader from Kano, Nigeria.</p>
+      <p>From crafting clothes as a tailor to writing code as a software engineer, my journey is deeply rooted in using technology for real-life transformation.</p>
+      <p>I am the mind behind <strong>MemoryWeb</strong>, an AI-based platform turning oral knowledge into structured digital memory. I also founded <strong>TechRise Kano</strong> and now lead <strong>Xelorra Tech Industry</strong>.</p>
+      <p>My passion lies in blending culture, technology, and leadership to build the future Nigeria needs.</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <h3>MemoryWeb</h3>
+        <p>MemoryWeb is a globally relevant platform that transforms oral traditions and personal memories into structured digital data. Users can submit text or voice recordings, which are then processed using AI to generate meaningful content—preserved forever. The system will eventually allow users to train a personal AI based on their memories.</p>
+        <a href="https://memoryweb-cffb0.web.app" target="_blank">Visit Website</a>
+      </div>
+      <div class="project-card">
+        <h3>TechRise Kano</h3>
+        <p>An outreach movement across Kano State to introduce secondary school students to the world of technology. We deliver free workshops on graphics, web development, and digital literacy, with an ambitious goal to cover all 44 LGAs.</p>
+        <a href="https://www.instagram.com/techrise.kano?igsh=MTF4b2lzZjl4cjBpZg%3D%3D&utm_source=qr" target="_blank">Visit Page</a>
+      </div>
+      <div class="project-card">
+        <h3>Xelorra Tech Industry</h3>
+        <p>Xelorra is a future-driven tech company focused on building global solutions from Africa starting with MemoryWeb. Rooted in clarity, resilience, and innovation, Xelorra empowers creators, dreamers, and disruptors to preserve legacies and build technology that matters.</p>
+        <a href="https://www.instagram.com/xelorra.ng?igsh=MTNxZXZvNTB3a3p2MQ%3D%3D&utm_source=qr" target="_blank">Explore Brand</a>
+      </div>
+      <div class="project-card">
+        <h3>Faceless Content Series</h3>
+        <p>This series uses anonymous voice-over and minimal visuals to explain deep truths about relationships, human behavior, and societal issues. The goal is to change perspectives, especially among Nigerian youth, by presenting relatable, reality-based messages.</p>
+        <a href="https://youtu.be/GNNwT45MCKQ?si=3dqM7B54Vr4lPaof" target="_blank">Watch Series</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Services</h2>
+      <div class="service-box">
+        <h4>Web Development</h4>
+        <p>Building visually clean and responsive websites using HTML, CSS, JavaScript, PHP, MySQL, and Firebase—tailored to both businesses and community initiatives.</p>
+      </div>
+      <div class="service-box">
+        <h4>Tech Empowerment Training</h4>
+        <p>We conduct hands-on sessions in schools and underserved communities, training youths in essential digital skills including design, web development, and computer basics.</p>
+      </div>
+      <div class="service-box">
+        <h4>NGO Collaboration</h4>
+        <p>We offer strategic partnership opportunities for NGOs looking to expand their impact through grassroots technology empowerment and innovation-driven outreach.</p>
+      </div>
+      <div class="service-box">
+        <h4>Public Speaking</h4>
+        <p>Available for talks on youth development, tech-for-good, digital empowerment, and national transformation, both online and offline.</p>
+      </div>
+      <div class="service-box">
+        <h4>Tailoring & Creative Branding</h4>
+        <p>Fashion design and unique branding services rooted in tradition and modern expression. We provide styling, tailoring, and personal branding consulting.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>I'm open to collaborations, projects, outreach, and public speaking. Let's connect!</p> <br><br>
+      <div class="contact-form">
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+      <div class="social-links">
+        <a href="https://www.instagram.com/d_mheiz?igsh=c3A3am5hcmZqM3Nr&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://wa.me/2349120048986" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://youtu.be/GNNwT45MCKQ?si=3dqM7B54Vr4lPaof" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Muhsin Ibrahim | D Mhiz. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
