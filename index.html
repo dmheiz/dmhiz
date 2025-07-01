@@ -14,11 +14,10 @@
   <header>
     <nav>
       <div class="logo">D Mhiz</div>
-<div class="menu-toggle">
-  <i class="fas fa-bars open-icon"></i>
-  <i class="fas fa-times close-icon" style="display: none;"></i>
-</div>
-
+      <div class="menu-toggle">
+        <i class="fas fa-bars open-icon"></i>
+        <i class="fas fa-times close-icon" style="display: none;"></i>
+      </div>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -107,34 +106,94 @@
   <section id="contact" class="contact">
     <div class="container">
       <h2>Contact Me</h2>
-      <p>I'm open to collaborations, projects, outreach, and public speaking. Let's connect!</p> <br><br>
+      <p>I'm open to collaborations, projects, outreach, and public speaking. Let's connect!</p><br><br>
       <div class="contact-form">
-<form id="contactForm">
-  <input type="text" id="name" name="name" placeholder="Your Name" required>
-  <input type="email" id="email" name="email" placeholder="Your Email" required>
-  <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-  <button type="submit">Send Message</button>
-</form>
-<div id="chatArea" style="display:none; margin-top: 30px;"></div>
-
+        <form id="contactForm">
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+          <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <div id="chatArea" style="display:none; margin-top: 30px;"></div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-      <div class="social-links">
-        <a href="https://www.instagram.com/d_mheiz?igsh=c3A3am5hcmZqM3Nr&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/2349120048986" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://youtu.be/GNNwT45MCKQ?si=3dqM7B54Vr4lPaof" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://mailto:muhsinibraheemsani@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-      </div><br><br>
+    <div class="social-links">
+      <a href="https://www.instagram.com/d_mheiz?igsh=c3A3am5hcmZqM3Nr&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/2349120048986" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://youtu.be/GNNwT45MCKQ?si=3dqM7B54Vr4lPaof" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="mailto:muhsinibraheemsani@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    </div><br><br>
     <p>&copy; 2025 Muhsin Ibrahim | D Mhiz. All Rights Reserved.</p>
   </footer>
-  <!-- Firebase CDN -->
-<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js"></script>
 
-    <script src="main.js"></script>
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAs1GrbyqlK1EtQBygpALuzWms0V1dEUr8",
+      authDomain: "memoryweb-cffb0.firebaseapp.com",
+      projectId: "memoryweb-cffb0",
+      storageBucket: "memoryweb-cffb0.appspot.com",
+      messagingSenderId: "528144846578",
+      appId: "1:528144846578:web:b1ff231150b3d1eb070a6b",
+      measurementId: "G-0N24LDYQF8"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
+  <script>
+    const form = document.getElementById('contactForm');
+    const chatArea = document.getElementById('chatArea');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const name = form.name.value;
+      const email = form.email.value;
+      const message = form.message.value;
+
+      await db.collection('contacts').add({ name, email, message, timestamp: new Date() });
+      form.reset();
+
+      chatArea.style.display = 'block';
+      chatArea.innerHTML = `
+        <h3>Conversation with ${name}</h3>
+        <div id="chatMessages" style="background:#f0f0f0; padding:15px; border-radius:10px; margin-bottom:10px;">
+          <p><strong>${name}:</strong> ${message}</p>
+        </div>
+        <form id="replyForm">
+          <textarea id="replyText" placeholder="Reply..." required rows="3" style="width:100%;"></textarea>
+          <button type="submit">Send Reply</button>
+        </form>
+      `;
+
+      document.getElementById('replyForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const reply = document.getElementById('replyText').value;
+        const chatMessages = document.getElementById('chatMessages');
+        chatMessages.innerHTML += `<p><strong>You:</strong> ${reply}</p>`;
+        document.getElementById('replyText').value = '';
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.querySelector(".menu-toggle");
+      const openIcon = document.querySelector(".open-icon");
+      const closeIcon = document.querySelector(".close-icon");
+      const menu = document.querySelector("nav ul");
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("show");
+        const isOpen = menu.classList.contains("show");
+        openIcon.style.display = isOpen ? "none" : "inline-block";
+        closeIcon.style.display = isOpen ? "inline-block" : "none";
+      });
+    });
+  </script>
 </body>
 </html>
